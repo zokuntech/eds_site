@@ -86,7 +86,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
               key={index}
               value={stat.value}
               label={stat.label}
-              variant={stat.variant}
+              variant={stat.variant as "filled" | "outline"}
             />
           ))}
         </section>
