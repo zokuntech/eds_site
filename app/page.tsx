@@ -1,9 +1,9 @@
-import AboutUs from "@/components/AboutUs/AboutUs";
-import ContactSection from "@/components/ContactSection";
-import Hero from "@/components/Hero/index";
-import RecentProjects from "@/components/RecentProjects";
-import ServicesPage from "@/components/Services";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import AboutUs from "@/components/Home/AboutUs/AboutUs";
+import ContactSection from "@/components/Home/ContactSection";
+import Hero from "@/components/Home/Hero/index";
+import RecentProjects from "@/components/Home/RecentProjects";
+import ServicesPage from "@/components/Home/Services";
+import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 export default function Home() {
   return (
