@@ -2,15 +2,17 @@ import React from 'react';
 
 interface ProjectCardProps {
   imageUrl: string;
+  alt: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, alt }) => {
   return (
-    <article className="flex overflow-hidden flex-col grow shrink bg-zinc-600 min-w-[240px] w-[280px]">
-      <div className="flex shrink-0 bg-gray-400 h-[374px]">
-        <img src={imageUrl} alt="Project thumbnail" className="w-full h-full object-cover" />
-      </div>
-    </article>
+    <img 
+      loading="lazy" 
+      src={imageUrl} 
+      alt={alt} 
+      className="object-contain grow shrink aspect-[1.47] min-w-[240px] w-[478px] max-md:max-w-full" 
+    />
   );
 };
 

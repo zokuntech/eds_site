@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
+
+const navigationItems = [
+  { label: 'Home', isActive: true },
+  { label: 'Projects', isActive: false },
+  { label: 'Services', isActive: false },
+  { label: 'About', isActive: false },
+  { label: 'Contact Us', isActive: false },
+];
 
 const Navigation: React.FC = () => {
-  const navItems = [
-    { label: "Home", isActive: true, route: "/" },
-    { label: "About Us", isActive: false, route: "/about" },
-    { label: "Services", isActive: false, route: "/services" },
-    { label: "Blog", isActive: false, route: "/blog" },
-  ];
-
   return (
-    <nav className="flex gap-6 items-start my-auto text-base font-medium leading-snug text-sky-500 rotate-[-0.003107424703882245rad]">
-      {navItems.map((item, index) => (
+    <nav className="flex flex-auto gap-8 items-start my-auto font-medium leading-snug text-sky-500 rotate-[-0.003107424703882245rad] max-md:max-w-full">
+      {navigationItems.map((item, index) => (
         <a
           key={index}
-          href={item.route}
-          className={item.isActive ? "font-bold text-red-600" : ""}
-          aria-current={item.isActive ? "page" : undefined}
+          href={`#${item.label.toLowerCase().replace(' ', '-')}`}
+          className={item.isActive ? 'font-bold text-red-600' : ''}
         >
           {item.label}
         </a>

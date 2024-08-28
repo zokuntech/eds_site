@@ -31,7 +31,15 @@ const differentiators: Differentiator[] = [
 const DifferentiatorList: React.FC = () => {
   return (
     <div className="flex flex-col w-[32%] max-md:ml-0 max-md:w-full">
-      <ul className="flex flex-col w-full text-lg leading-6 text-gray-400 max-md:mt-5">
+      <p>
+        {" "}
+        we understand that every project is unique, whether you're a contractor
+        overseeing new construction, a real estate agent looking to enhance
+        property appeal, or a homeowner ready to refresh your living space. Our
+        professional painting services are designed to meet the diverse needs of
+        our clients, delivering top-quality results that stand the test of time.
+      </p>
+      {/* <ul className="flex flex-col w-full text-lg leading-6 text-gray-400 max-md:mt-5">
         {differentiators.map((item, index) => (
           <li key={index}>
             <div className="flex overflow-hidden gap-3 items-center leading-snug rounded">
@@ -48,7 +56,7 @@ const DifferentiatorList: React.FC = () => {
             )}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

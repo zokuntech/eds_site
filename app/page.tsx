@@ -4,6 +4,7 @@ import Hero from "@/components/Home/Hero/index";
 import RecentProjects from "@/components/Home/RecentProjects";
 import ServicesPage from "@/components/Home/Services";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
+import Reviews from "@/components/Home/Reviews";
 
 export default function Home() {
   return (
@@ -15,7 +16,41 @@ export default function Home() {
       <WhyChooseUs />
       <AboutUs />
       <ServicesPage />
-      <RecentProjects />
+      <RecentProjects
+        projects={[
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+          {
+            id: 123,
+            imageUrl: "https://picsum.photos/id/237/200/300",
+            alt: "dog",
+          },
+        ]}
+      />
+      <Reviews />
       <ContactSection />
     </main>
   );

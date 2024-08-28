@@ -1,7 +1,7 @@
 import React from "react";
 import StatCard from "./StatCard";
 import ValueCard from "./ValueCard";
-import ImageContainer from "./ImageContainer";
+import SectionHeader from "./SectionHeader";
 
 interface AboutUsProps {}
 
@@ -22,10 +22,10 @@ const AboutUs: React.FC<AboutUsProps> = () => {
   ];
 
   const stats = [
-    { value: "10+", label: "Years of Experience", variant: "outline" },
-    { value: "4.8/5", label: "Ratings from Customers", variant: "filled" },
-    { value: "20+", label: "Countries Served", variant: "outline" },
-    { value: "1.3k", label: "Successful Installations", variant: "outline" },
+    { value: "4+", label: "Years of Experience", highlighted: false },
+    { value: "4.8/5", label: "Ratings from Customers", highlighted: true },
+    { value: "200+", label: "Customers Served", highlighted: false },
+    { value: "3", label: "Community Awards", highlighted: false },
   ];
 
   return (
@@ -33,18 +33,17 @@ const AboutUs: React.FC<AboutUsProps> = () => {
       <div className="flex flex-col -mb-7 w-full max-w-[1140px] max-md:mb-2.5 max-md:max-w-full">
         <section className="max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
-            <ImageContainer className="w-6/12 max-md:ml-0 max-md:w-full" />
+            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/15f39a1dbd6185af100f4b0a3af89aae5d328f5b0530e53be4a82d6cd11fe9b3?placeholderIfAbsent=true&apiKey=e4387585966a4fd287da9e7858e1871a"
+                alt="Painting experts at work"
+                className="object-contain w-full aspect-[1.33] max-md:mt-10 max-md:max-w-full"
+              />
+            </div>
             <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col mt-1.5 w-full max-md:mt-10 max-md:max-w-full">
-                <div className="flex gap-3.5 items-center self-start text-sm font-bold tracking-widest leading-none text-sky-500 uppercase rounded-3xl">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/30d045d640cd6405f1182f2be10081a34ad419072878ae8728ec6899e43b7b24?placeholderIfAbsent=true&apiKey=e4387585966a4fd287da9e7858e1871a"
-                    className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
-                    alt=""
-                  />
-                  <span className="self-stretch my-auto">About Us</span>
-                </div>
+                <SectionHeader title="About Us" />
                 <h1 className="mt-5 text-6xl font-semibold leading-[83px] text-neutral-600 max-md:max-w-full max-md:text-4xl max-md:leading-[57px]">
                   Your Trusted Painting Experts
                 </h1>
@@ -62,9 +61,16 @@ const AboutUs: React.FC<AboutUsProps> = () => {
         </section>
         <section className="mt-5 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
-            <ImageContainer className="w-6/12 max-md:ml-0 max-md:w-full" />
+            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/222fbe14f6490cbb1fb760f6df4391935497f7bcfd47158ed8833e51d2317dbd?placeholderIfAbsent=true&apiKey=e4387585966a4fd287da9e7858e1871a"
+                alt="Our values in action"
+                className="object-contain grow w-full aspect-[1.3] max-md:mt-10 max-md:max-w-full"
+              />
+            </div>
             <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col self-stretch my-auto text-neutral-600 max-md:mt-10 max-md:max-w-full">
+              <div className="flex flex-col grow mt-3 text-neutral-600 max-md:mt-10 max-md:max-w-full">
                 <h2 className="text-xl font-bold leading-tight">Our Values:</h2>
                 <div className="flex flex-col mt-4 w-full text-lg leading-6 max-w-[560px] max-md:max-w-full">
                   {values.map((value, index) => (
@@ -86,7 +92,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
               key={index}
               value={stat.value}
               label={stat.label}
-              variant={stat.variant as "filled" | "outline"}
+              highlighted={stat.highlighted}
             />
           ))}
         </section>
