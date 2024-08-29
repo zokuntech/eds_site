@@ -33,7 +33,7 @@ const DifferentiatorList: React.FC = () => {
     <div className="flex flex-col w-[32%] max-md:ml-0 max-md:w-full">
       <p>
         {" "}
-        we understand that every project is unique, whether you're a contractor
+        we understand that every project is unique, whether youre a contractor
         overseeing new construction, a real estate agent looking to enhance
         property appeal, or a homeowner ready to refresh your living space. Our
         professional painting services are designed to meet the diverse needs of
