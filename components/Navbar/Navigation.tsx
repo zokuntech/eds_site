@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const navigationItems = [
-  { label: 'Home', isActive: true },
-  { label: 'Projects', isActive: false },
-  { label: 'Services', isActive: false },
-  { label: 'About', isActive: false },
-  { label: 'Contact Us', isActive: false },
+  { label: "Home", isActive: true, url: "/" },
+  { label: "Projects", isActive: false, url: "projects" },
+  { label: "Services", isActive: false, url: "services" },
+  { label: "About", isActive: false, url: "about" },
+  { label: "Contact Us", isActive: false, url: "contact" },
 ];
 
 const Navigation: React.FC = () => {
@@ -14,8 +14,8 @@ const Navigation: React.FC = () => {
       {navigationItems.map((item, index) => (
         <a
           key={index}
-          href={`#${item.label.toLowerCase().replace(' ', '-')}`}
-          className={item.isActive ? 'font-bold text-red-600' : ''}
+          href={`${item.url.toLowerCase().replace(" ", "-")}`}
+          className={item.isActive ? "font-bold text-red-600" : ""}
         >
           {item.label}
         </a>

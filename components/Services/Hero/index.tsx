@@ -1,23 +1,13 @@
 import React from 'react';
+import QualityPaintingServices from './QualityPaintingServices';
 
-interface ServicesHeaderProps {
-  title: string;
-  breadcrumb: string;
-}
-
-const ServicesHeader: React.FC<ServicesHeaderProps> = ({ title, breadcrumb }) => {
+const QualityPaintingServicesWrapper: React.FC = () => {
   return (
-    <header className="flex flex-col justify-center items-center px-20 py-52 w-full bg-gray-400 max-md:px-5 max-md:py-24 max-md:max-w-full">
-      <div className="flex flex-col -mb-10 max-w-full w-[253px] max-md:mb-2.5">
-        <h1 className="text-6xl leading-tight text-white max-md:text-4xl">
-          {title}
-        </h1>
-        <nav className="self-center mt-4 text-sm font-medium tracking-widest leading-none text-gray-400 uppercase">
-          {breadcrumb}
-        </nav>
-      </div>
-    </header>
+    <QualityPaintingServices
+      title="Quality Painting Services for Every Project"
+      backgroundImageSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/03e42db11b87c0337f6f972f9eef31660cfc2f883bf5cdae330179e95a268211?placeholderIfAbsent=true&apiKey=e4387585966a4fd287da9e7858e1871a"
+    />
   );
 };
 
-export default ServicesHeader;
+export default QualityPaintingServicesWrapper;
