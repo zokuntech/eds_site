@@ -20,7 +20,7 @@ const HowWeStandOut: React.FC<HowWeStandOutProps> = ({ features }) => {
         </header>
         <p className="flex flex-col mt-2.5 w-full text-xl font-medium leading-7 text-neutral-400 max-md:max-w-full">
           <span className="overflow-hidden flex-1 shrink gap-3 self-stretch w-full rounded max-md:max-w-full">
-            We understand that every project is unique, whether you're a contractor overseeing new construction, a real estate agent looking to enhance property appeal, or a homeowner ready to refresh your living space. Our professional painting services are designed to meet the diverse needs of our clients, delivering top-quality results that stand the test of time.
+            We understand that every project is unique, whether you are a contractor overseeing new construction, a real estate agent looking to enhance property appeal, or a homeowner ready to refresh your living space. Our professional painting services are designed to meet the diverse needs of our clients, delivering top-quality results that stand the test of time.
           </span>
         </p>
         <div className="mt-11 w-full max-md:mt-10 max-md:max-w-full">

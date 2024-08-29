@@ -19,7 +19,7 @@ const ExpertiseHeader: React.FC = () => {
         <p className="mt-5 text-lg leading-6 text-neutral-600 max-md:max-w-full">
           With years of experience in the industry, we have built a reputation
           for reliability, attention to detail, and a personalized approach to
-          every project. Whether it's a residential makeover, a commercial
+          every project. Whether it is a residential makeover, a commercial
           renovation, or a specialty coating job, we bring the same level of
           passion and precision to every task.
         </p>
