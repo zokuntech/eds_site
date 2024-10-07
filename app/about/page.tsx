@@ -2,6 +2,9 @@ import AboutUs from "@/components/About/AboutUs";
 import ExpertiseSection from "@/components/About/ExpertiseSection";
 import { HeroSection } from "@/components/About/Hero/HeroSection";
 import TeamSection from "@/components/About/TeamSection/TeamSection";
+import CTA from "@/components/sections/CTA";
+import FAQ from "@/components/sections/FAQ";
+import About from "@/components/Home/AboutUs/AboutUs";
 
 const AboutPage: React.FC = () => {
   return (
@@ -21,7 +24,24 @@ const AboutPage: React.FC = () => {
         ratingText={"Ratings from Customer"}
       />
       <TeamSection />
-      <ExpertiseSection />
+      <CTA
+        title="Ready to Break Ground? Click Here for Expert Guidance"
+        description="as"
+        buttonText="Contact Us"
+      />
+      <About />
+      <FAQ
+        experienceYears={5}
+        happyClients={120}
+        faqItems={[
+          {
+            question: "",
+            answer:
+              "The timeline depends on the project size and complexity. We’ll provide an estimated timeline during the consultation and keep you updated throughout.",
+            isOpen: false,
+          },
+        ]}
+      />
     </main>
   );
 };
